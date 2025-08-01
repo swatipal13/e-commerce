@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+.cl-avatarBox{
+  width: 40px;
+  height: 40px;
+}
+
+.arrows{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+input {
+  background-color: #ffffff;
+  accent-color: red;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+  
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-on-hover:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+  
