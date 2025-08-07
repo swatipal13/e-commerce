@@ -10,21 +10,7 @@ import {
 import { Fan } from "lucide-react";
 
 const Category = () => {
-  const { data, fetchAllProducts } = getData();
-  const getUniqueCategory = (data, property) => {
-    let newVal = data?.map((curElem) => {
-      return curElem[property];
-    });
-    newVal = [...new Set(newVal)];
-    return newVal;
-  };
-
-  const categoryData = getUniqueCategory(data, "category");
-  console.log(categoryData);
-
-  useEffect(() => {
-    fetchAllProducts();
-  }, []);
+  const { categoryData} = getData();
 
   const icons = [
     <FaHeadphones />,

@@ -20,9 +20,20 @@ try {
 }
 }
 
+  const getUniqueCategory = (data, property) => {
+    let newVal = data?.map((curElem) => {
+      return curElem[property];
+    });
+    newVal = ["ALL",...new Set(newVal)];
+    return newVal;
+  };
+
+  const categoryData = getUniqueCategory(data, "category");
+  const brandData = getUniqueCategory(data, "brand")
+
   return (
     <>
-      <DataContext.Provider value={{ data, setData, fetchAllProducts }}>
+      <DataContext.Provider value={{ data, setData, fetchAllProducts, categoryData, brandData }}>
         {children}
       </DataContext.Provider>
     </>
